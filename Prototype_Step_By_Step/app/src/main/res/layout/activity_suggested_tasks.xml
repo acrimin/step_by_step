@@ -37,20 +37,18 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+
     <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="350sp"
         android:layout_above="@+id/button2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:id="@+id/imageButton4"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:numColumns="3"
+        android:gravity="center"
+        android:columnWidth="50dp"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"/>
 
 </RelativeLayout>

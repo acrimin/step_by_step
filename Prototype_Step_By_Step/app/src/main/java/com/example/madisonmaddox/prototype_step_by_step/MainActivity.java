@@ -10,15 +10,21 @@ import static android.R.attr.button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button but1;
-
-    public void changeActivity(View v) {
-        startActivity(new Intent(this, SuggestedTasks.class));
-    }
+    public Button button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button newPage = (Button)findViewById(R.id.but1);
+
+        newPage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                Intent nextScreen = new Intent(getApplicationContext(), SuggestedTasks.class);
+
+                startActivity(nextScreen);
+            }
+        });
     }
 }
