@@ -1,6 +1,8 @@
 package com.example.madisonmaddox.prototype_step_by_step;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,11 @@ public class SuggestedTasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggested_tasks);
+
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("step_by_step", Context.MODE_PRIVATE);
+        int user_id = sharedPreferences.getInt("user_id", 0);
+
+        Toast.makeText(this, "user_id: " + user_id, Toast.LENGTH_LONG).show();
 
         Button newPage = (Button) findViewById(R.id.button2);
 

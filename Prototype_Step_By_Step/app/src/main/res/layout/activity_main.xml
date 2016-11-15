@@ -57,6 +57,7 @@
         android:layout_marginTop="42dp"
         android:id="@+id/but1"
         android:layout_below="@+id/textView5"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="signInClick" />
 
 </RelativeLayout>
