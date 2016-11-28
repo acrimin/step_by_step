@@ -13,17 +13,36 @@ import android.widget.Toast;
 
 //import com.example.madisonmaddox.prototype_step_by_step.customAdapter;
 
-public class SuggestedTasks extends AppCompatActivity {
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class SuggestedTasks extends Activity {
+    /** Called when the activity is first created. */
 
     public Button button2;
 
+    private ImageAdapter mAdapter;
+    private ArrayList<String> listTaskNames;
+    private ArrayList<Integer> listPics;
+
+    private GridView gridView;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggested_tasks);
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("step_by_step", Context.MODE_PRIVATE);
         int user_id = sharedPreferences.getInt("user_id", 0);
+
+        prepareList();
 
         Toast.makeText(this, "user_id: " + user_id, Toast.LENGTH_LONG).show();
 
@@ -37,15 +56,55 @@ public class SuggestedTasks extends AppCompatActivity {
             }
         });
 
-        GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        // prepared arraylist and passed it to the Adapter class
+        mAdapter = new ImageAdapter(this,listTaskNames, listPics);
 
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        public void onItemClick(AdapterView<?> parent, View v,
-        int position, long id) {
-            Toast.makeText(SuggestedTasks.this, "" + position, Toast.LENGTH_SHORT).show();
-        }
-    });
-}
+        // Set custom adapter to gridview
+        gridView = (GridView) findViewById(R.id.gridview);
+        gridView.setAdapter(mAdapter);
 
+        // Implement On Item click listener
+        gridView.setOnItemClickListener(new OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+                                    long arg3) {
+                Toast.makeText(SuggestedTasks.this, mAdapter.getItem(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    public void prepareList()
+    {
+        listTaskNames = new ArrayList<String>();
+
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+        listTaskNames.add("Laundry");
+
+
+        listPics = new ArrayList<Integer>();
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+        listPics.add(R.drawable.laundry_clip_art);
+    }
 }

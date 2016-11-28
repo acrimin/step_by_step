@@ -32,7 +32,7 @@ public class AllTasks extends AppCompatActivity {
         });
 
         GridView gridview = (GridView) findViewById(R.id.allgridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        //gridview.setAdapter(new ImageAdapter(this));
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
