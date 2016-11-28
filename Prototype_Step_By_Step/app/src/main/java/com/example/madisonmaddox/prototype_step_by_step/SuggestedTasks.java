@@ -38,13 +38,12 @@ public class SuggestedTasks extends AppCompatActivity {
         });
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
-    gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new ImageAdapter(this));
 
-    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> parent, View v,
         int position, long id) {
-            Toast.makeText(SuggestedTasks.this, "" + position,
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(SuggestedTasks.this, "" + position, Toast.LENGTH_SHORT).show();
         }
     });
 }
