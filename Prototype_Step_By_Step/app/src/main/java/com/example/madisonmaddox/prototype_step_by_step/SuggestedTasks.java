@@ -94,6 +94,7 @@ public class SuggestedTasks extends Activity {
 
 
         listPics = new ArrayList<Integer>();
+
         listPics.add(R.drawable.laundry_clip_art);
         listPics.add(R.drawable.laundry_clip_art);
         listPics.add(R.drawable.laundry_clip_art);
