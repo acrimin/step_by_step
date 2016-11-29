@@ -9,25 +9,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#522D80"
     tools:context="com.example.madisonmaddox.prototype_step_by_step.SuggestedTasks">
 
     <TextView
         android:text="Suggested Tasks"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:paddingBottom="5dp"
         android:id="@+id/textView"
+        android:textAlignment="center"
+        android:background="@drawable/layout_round"
         android:textSize="36sp" />
 
     <TextView
         android:text="Your location: ..."
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="#ffffff"/>
 
     <Button
         android:text="All Tasks"
@@ -35,20 +41,30 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/layout_round"
+        android:textColor="#757575"
+        android:textSize="20sp"/>
 
 
-    <GridView
-        android:id="@+id/gridview"
-        android:layout_width="match_parent"
-        android:layout_height="350sp"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView6"
         android:layout_above="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:numColumns="3"
-        android:gravity="center"
-        android:columnWidth="50dp"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"/>
-
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:weightSum="1"
+        android:background="@drawable/layout_round_diff">
+        <GridView
+            android:layout_height="match_parent"
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:numColumns="2"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            android:scrollbars="vertical">
+        </GridView>
+    </LinearLayout>
 </RelativeLayout>
