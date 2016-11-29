@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.madisonmaddox.prototype_step_by_step.Database.DatabaseManager;
 import com.example.madisonmaddox.prototype_step_by_step.Model.*;
@@ -19,14 +20,18 @@ import static android.R.attr.button;
 
 public class MainActivity extends Activity {
 
+    EditText textFieldLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textFieldLogin = (EditText) findViewById(R.id.loginTextField);
+
         try {
             if (DatabaseManager.getInstance().init(getApplicationContext())) { // already logged in from previous
-                //toSuggested(null);
+                toSuggested(null);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -39,7 +44,8 @@ public class MainActivity extends Activity {
 
     public void toSuggested(View view) {
         try {   // login
-            DatabaseManager.getInstance().login("1234567890");
+            Log.i("database", textFieldLogin.getText().toString());
+            DatabaseManager.getInstance().login(textFieldLogin.getText().toString());
             Task[] tasks = DatabaseManager.getInstance().getAllTasks();
             Location[] locations = DatabaseManager.getInstance().getAllLocations();
             for (int i = 0; i < locations.length; i++) {

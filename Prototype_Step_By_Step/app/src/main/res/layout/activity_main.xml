@@ -11,17 +11,6 @@
     tools:context="com.example.madisonmaddox.prototype_step_by_step.MainActivity">
 
     <TextView
-        android:text="Step-By-Step"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="24sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginBottom="20dp" />
-
-    <TextView
         android:text="Clemson Life"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,22 +31,36 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="NAME"
+        android:text="Step-By-Step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/textView4"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
-        android:id="@+id/textView5"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:id="@+id/loginTextField" />
 
     <Button
         android:text="Continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:background="@drawable/layout_round"
+        android:layout_marginTop="21dp"
         android:id="@+id/but1"
-        android:layout_below="@+id/textView5"
-        android:layout_centerHorizontal="true"
-        android:onClick="toSuggested" />
+        android:onClick="toSuggested"
+        android:layout_below="@+id/loginTextField"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

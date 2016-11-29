@@ -75,7 +75,7 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:text="All Tasks"
+            android:text="All"
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             android:textColor="#757575"/>
 
         <Button
-            android:text="Suggested Tasks"
+            android:text="Suggested"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button6"
