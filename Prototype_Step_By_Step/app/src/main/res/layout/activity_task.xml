@@ -9,83 +9,71 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.madisonmaddox.prototype_step_by_step.Task">
+    tools:context="com.example.madisonmaddox.prototype_step_by_step.TaskPage">
 
     <TextView
         android:text="Laundry"
-        android:background="#3A4958"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:textColor="#ffffff"
-        android:id="@+id/textViewTask"
+        android:id="@+id/textView9"
         android:textSize="36sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"/>
-
-    <TextView
-        android:text="Video (Click to play)"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewVideo"
-        android:layout_below="@+id/textViewTask"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center" />
+        android:layout_centerHorizontal="true" />
 
     <VideoView
         android:layout_width="match_parent"
-        android:layout_height="150sp"
+        android:layout_height="160sp"
         android:id="@+id/videoView"
-        android:layout_below="@+id/textViewVideo"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Video (Click to play)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="160sp"
+        app:srcCompat="@android:drawable/ic_menu_more"
+        android:id="@+id/imageButton"
+        android:layout_below="@+id/textView11"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:text="TextView"
-        android:paddingTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewSteps"
+        android:id="@+id/textView11"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/videoView"
         android:layout_centerHorizontal="true" />
 
-    <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="150sp"
-        app:srcCompat="@android:drawable/ic_menu_more"
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/textViewSteps"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <LinearLayout
-        android:id="@+id/LinearLayout02"
-        android:paddingTop="5dp"
+    <Button
+        android:text="All Tasks"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_alignParentBottom="true">
+        android:id="@+id/button7"
+        android:layout_below="@+id/imageButton"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
 
-        <Button
-            android:text="All Tasks"
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:background="@android:drawable/btn_default" />
-
-        <Button
-            android:text="Suggested Tasks"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button6"
-            android:layout_weight="0.5"
-            android:background="@android:drawable/btn_default" />
-
-    </LinearLayout>
-
-
+    <Button
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:layout_below="@+id/imageButton"
+        android:layout_toLeftOf="@+id/textView11"
+        android:layout_toStartOf="@+id/textView11"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp" />
 </RelativeLayout>

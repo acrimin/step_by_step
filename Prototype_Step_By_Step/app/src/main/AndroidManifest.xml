@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".SuggestedTasks" />
         <activity android:name=".AllTasks" />
-        <activity android:name=".Task" />
+        <activity android:name=".CategoryTasks" />
+        <activity android:name=".TaskPage" />
         <activity android:name=".MiddleStep" />
         <activity android:name=".FinalStep"></activity>
     </application>
