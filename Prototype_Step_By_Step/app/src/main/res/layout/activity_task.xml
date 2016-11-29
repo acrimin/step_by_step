@@ -38,13 +38,15 @@
         android:textAlignment="center"
         android:textColor="#ffffff"/>
 
-    <VideoView
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="150sp"
-        android:id="@+id/videoView"
+        android:id="@+id/videoBtn"
         android:layout_below="@+id/textViewVideo"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/layout_round_black"
+        app:srcCompat="@drawable/video_default"/>
 
     <TextView
         android:text="Step by Step"
@@ -52,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewSteps"
-        android:layout_below="@+id/videoView"
+        android:layout_below="@+id/videoBtn"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"/>
 
@@ -78,7 +80,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:background="@drawable/layout_round" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/layout_round"
+            android:textColor="#757575"/>
 
         <Button
             android:text="Suggested Tasks"
@@ -86,6 +91,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/button6"
             android:layout_weight="0.5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#757575"
             android:background="@drawable/layout_round" />
 
     </LinearLayout>
