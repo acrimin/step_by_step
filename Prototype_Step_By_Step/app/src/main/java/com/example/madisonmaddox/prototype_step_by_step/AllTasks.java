@@ -87,7 +87,7 @@ public class AllTasks extends Activity {
         listTaskNames = new ArrayList<String>();
 
         listTaskNames.add("Dishes");
-        listTaskNames.add("Stocking Shelves");
+        listTaskNames.add("Stocking");
         listTaskNames.add("Laundry");
         listTaskNames.add("Laundry");
         listTaskNames.add("Laundry");
