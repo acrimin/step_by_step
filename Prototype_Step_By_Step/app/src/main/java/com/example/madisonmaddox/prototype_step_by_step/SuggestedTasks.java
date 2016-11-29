@@ -3,16 +3,22 @@ package com.example.madisonmaddox.prototype_step_by_step;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 //import com.example.madisonmaddox.prototype_step_by_step.customAdapter;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import android.app.Activity;
@@ -70,6 +76,8 @@ public class SuggestedTasks extends Activity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                                     long arg3) {
                 Toast.makeText(SuggestedTasks.this, mAdapter.getItem(position), Toast.LENGTH_SHORT).show();
+                Intent goTask = new Intent(getApplicationContext(), Task.class);
+                startActivity(goTask);
             }
         });
 

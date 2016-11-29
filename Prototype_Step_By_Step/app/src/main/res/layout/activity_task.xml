@@ -67,13 +67,10 @@
         android:layout_toEndOf="@+id/textView11" />
 
     <Button
-        android:text="Home"
+        android:text="Suggested Tasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button6"
         android:layout_below="@+id/imageButton"
-        android:layout_toLeftOf="@+id/textView11"
-        android:layout_toStartOf="@+id/textView11"
-        android:layout_marginRight="21dp"
-        android:layout_marginEnd="21dp" />
+        android:layout_toStartOf="@+id/textView11" />
 </RelativeLayout>
