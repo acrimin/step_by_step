@@ -1,5 +1,6 @@
 package com.example.madisonmaddox.prototype_step_by_step;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class TaskPage extends AppCompatActivity {
+public class TaskPage extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

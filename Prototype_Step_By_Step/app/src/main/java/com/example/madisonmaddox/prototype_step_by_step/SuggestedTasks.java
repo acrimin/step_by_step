@@ -1,5 +1,6 @@
 package com.example.madisonmaddox.prototype_step_by_step;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 
 //import com.example.madisonmaddox.prototype_step_by_step.customAdapter;
 
-public class SuggestedTasks extends AppCompatActivity {
+public class SuggestedTasks extends Activity {
 
     private ImageAdapter mAdapter;
     private ArrayList<String> listTaskNames;

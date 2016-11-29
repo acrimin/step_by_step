@@ -1,5 +1,6 @@
 package com.example.madisonmaddox.prototype_step_by_step;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 
 import static android.R.attr.button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             if (DatabaseManager.getInstance().init(getApplicationContext())) { // already logged in from previous
-                toSuggested(null);
+                //toSuggested(null);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

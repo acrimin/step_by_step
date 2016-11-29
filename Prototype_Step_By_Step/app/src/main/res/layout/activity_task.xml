@@ -28,7 +28,7 @@
 
     <TextView
         android:text="Video (Click to play)"
-        android:paddingTop="10dp"
+        android:paddingTop="15dp"
         android:paddingBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
 
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="150sp"
+        android:layout_height="170sp"
         android:id="@+id/videoBtn"
         android:layout_below="@+id/textViewVideo"
         android:layout_alignParentLeft="true"
@@ -60,7 +60,7 @@
 
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="150sp"
+        android:layout_height="170sp"
         app:srcCompat="@android:drawable/ic_menu_more"
         android:id="@+id/imageButton"
         android:layout_below="@+id/textViewSteps"
